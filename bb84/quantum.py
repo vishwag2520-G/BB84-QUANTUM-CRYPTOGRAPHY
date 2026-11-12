@@ -35,6 +35,8 @@ def measure_qubit(state, basis, rng=None):
     """Measure a normalized qubit state in the Z or X basis."""
 
     state = np.asarray(state, dtype=complex)
+    if not np.all(np.isfinite(state)):
+        raise ValueError("State must contain finite values")
 
     if state.shape != (2,):
         raise ValueError("State must be a two-element vector")

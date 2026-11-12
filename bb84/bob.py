@@ -4,9 +4,8 @@ from bb84.quantum import measure_qubit
 
 def generate_bases(n):
     """Generate Bob's independent random bases."""
-    if n <= 0:
-        raise ValueError("Number of bases must be positive")
-
+    if not isinstance(n, int) or isinstance(n, bool) or n <= 0:
+        raise ValueError("n must be a positive integer")
     return [
         "Z" if secrets.randbits(1) == 0 else "X"
         for _ in range(n)
@@ -34,3 +33,4 @@ def bob_simulation(states):
 
     return bases, results
 
+    return indices, alice_key, bob_ke

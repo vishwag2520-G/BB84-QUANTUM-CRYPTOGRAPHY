@@ -4,6 +4,8 @@ from bb84.quantum import measure_qubit, encode_qubit
 
 def generate_eve_bases(n):
     """Generate Eve's random measurement bases."""
+    if not isinstance(n, int) or isinstance(n, bool) or n < 0:
+        raise ValueError("n must be a non-negative integer")
     return [
         "Z" if secrets.randbits(1) == 0 else "X"
         for _ in range(n)

@@ -4,16 +4,15 @@ from bb84.quantum import encode_qubit
 
 def generate_bits(n):
     """Generate n cryptographically secure random bits."""
-    if n <= 0:
-        raise ValueError("Number of bits must be positive")
+    if not isinstance(n, int) or isinstance(n, bool) or n <= 0:
+        raise ValueError("n must be a positive integer")
 
     return [secrets.randbits(1) for _ in range(n)]
 
-
 def generate_bases(n):
     """Generate random Z and X measurement bases."""
-    if n <= 0:
-        raise ValueError("Number of bases must be positive")
+    if not isinstance(n, int) or isinstance(n, bool) or n <= 0:
+        raise ValueError("n must be a positive integer")
 
     return [
         "Z" if secrets.randbits(1) == 0 else "X"

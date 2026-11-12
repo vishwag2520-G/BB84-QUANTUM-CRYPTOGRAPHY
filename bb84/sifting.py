@@ -2,13 +2,15 @@ def compare_bases(alice_bases, bob_bases):
     if len(alice_bases) != len(bob_bases):
         raise ValueError("Basis lengths must match")
 
+    if any(b not in ("Z", "X") for b in alice_bases + bob_bases):
+        raise ValueError("Bases must be Z or X")
+
     return [
         i for i, (a, b) in enumerate(
             zip(alice_bases, bob_bases)
         )
         if a == b
     ]
-
 
 def sift_key(bits, matching_indices):
     return [bits[i] for i in matching_indices]

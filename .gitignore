@@ -9,3 +9,10 @@ venv/
 # Editor files
 .vscode/
 .idea/
+# Python cache files
+__pycache__/
+*.py[cod]
+
+# Test and coverage files
+.coverage
+.pytest_cache/
