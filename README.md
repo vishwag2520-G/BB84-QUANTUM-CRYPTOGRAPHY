@@ -150,7 +150,9 @@ The project includes seven automated unit tests covering:
 - Key sifting
 - QBER calculation
 - Intercept-and-resend attack detection
+### Test Execution Screenshot
 
+![BB84 Automated Test Results](screenshots/test_results.png)
 - 
 - ## ⚠️ Research Limitations
 
