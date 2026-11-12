@@ -174,6 +174,9 @@ All seven tests pass successfully.
 |---|---:|
 | Without Eve | 0% |
 | With intercept-and-resend attack | Approximately 25% |
+### QBER Comparison Chart
+
+![BB84 QBER Comparison](results/qber_comparison.png)
 
 ### Security Observation
 The intercept-and-resend attack introduces errors into the shared key. 
