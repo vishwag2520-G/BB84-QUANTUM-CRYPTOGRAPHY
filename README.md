@@ -145,4 +145,5 @@ python -m experiments.run_experiments
 python -m unittest discover -s tests -v
 ```
 
-The current test suite contains seven automated tests covering
+The current test suite contains seven automated tests.
+All seven tests pass successfully.
