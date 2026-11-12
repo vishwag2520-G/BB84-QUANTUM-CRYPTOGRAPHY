@@ -139,11 +139,19 @@ Run from the project root:
 python -m experiments.run_experiments
 ```
 
-## Running Tests
+## 🧪 Testing
 
-```bash
-python -m unittest discover -s tests -v
-```
+The project includes seven automated unit tests covering:
+
+- Random bit generation
+- Quantum state preparation
+- Basis selection
+- Measurement operations
+- Key sifting
+- QBER calculation
+- Intercept-and-resend attack detection
+
+**Test Result:** 7 tests passed successfully.
 
 The current test suite contains seven automated tests.
 All seven tests pass successfully.
