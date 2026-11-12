@@ -151,7 +151,28 @@ The project includes seven automated unit tests covering:
 - QBER calculation
 - Intercept-and-resend attack detection
 
+- 
+- ## ⚠️ Research Limitations
+
+- This project is a software-based BB84 simulation.
+- It does not use real quantum hardware.
+- Quantum noise and hardware imperfections are not fully modeled.
+- The simulation demonstrates the basic BB84 protocol and an intercept-and-resend attack.
+- It is an educational and experimental implementation, not a production-ready QKD system.
+
 **Test Result:** 7 tests passed successfully.
+
 
 The current test suite contains seven automated tests.
 All seven tests pass successfully.
+
+## 📊 Experimental Results
+
+| Experiment | Expected QBER |
+|---|---:|
+| Without Eve | 0% |
+| With intercept-and-resend attack | Approximately 25% |
+
+### Security Observation
+The intercept-and-resend attack introduces errors into the shared key. 
+This increases the Quantum Bit Error Rate (QBER), helping Alice and Bob detect potential eavesdropping.
